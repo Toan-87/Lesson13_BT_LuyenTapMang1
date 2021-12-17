@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TaoVaThaoTacVoiMang</title>
+    <style>
+        body {
+            padding-top: 50px
+        }
+    </style>
+</head>
+<body>
+<h2>Sample Sceen:</h2>
+<input type="text" id="txtValue">
+<input type="button" id="btnAdd" value="Add" onclick="add_element_to_array()">
+<input type="button" id="btnDisplay" value="Display" onclick="display_array()">
+<div id="ketqua"></div>
+<script>
+    let x = 0;
+    let array = Array();
+    let newArr = [];
+    let count = 0;
+    let result = [];
+
+    function add_element_to_array() {
+        array[x] = document.getElementById('txtValue').value;
+        x++;
+        document.getElementById('txtValue').value = "";
+        document.getElementById('txtValue').focus()
+    }
+
+    function display_array() {
+        for (i = 0; i < array.length; i++) {
+            newArr.push(array[i]);
+        }
+        for (j = 0; j < newArr.length; j++) {
+            if (newArr[j] > 10) {
+                result.push(newArr[j]);
+                count++
+            }
+            document.getElementById('ketqua').innerHTML = 'Dãy ' + newArr + ' vừa nhập vào' + ' có ' + count + ' số lớn hơn 10' + ' là ' + result
+        }
+    }
+</script>

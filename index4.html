@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<!--Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.-->
+<script>
+    let integer = [1, 2, 5, 11, 18, 3, 23, 38, 6, 100];
+    let firt = 0
+    let last = integer.length-1;
+    while (firt<last){
+        let b = integer[firt];
+        integer[firt] = integer[last];
+        integer[last] = b;
+        firt++
+        last--
+    }document.write(integer);
+</script>
+</body>
+</html>

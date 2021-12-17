@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TaoVaThaoTacVoiMang</title>
+    <style>
+        body {
+            padding-top: 50px
+        }
+    </style>
+</head>
+<body>
+<h2>Sample Sceen:</h2>
+<input type="text" id="txtValue">
+<input type="button" id="btnAdd" value="Add" onclick="add_element_to_array()">
+<input type="button" id="btnDisplay" value="Display" onclick="display_array()">
+<div id="ketqua"></div>
+<script>
+    let x = 0;
+    let array = Array();
+    let newArr = [];
+    let found = false;
+    function add_element_to_array() {
+        array[x] = document.getElementById('txtValue').value;
+        x++;
+        document.getElementById('txtValue').value = "";
+        document.getElementById('txtValue').focus();
+    }
+
+    function display_array() {
+        for (let i = 0; i < array.length; i++) {
+            newArr.push(array[i]);
+        }
+        let num = parseInt(prompt('V: '));
+        for (let j = 0; j < newArr.length; j++) {
+            if (num == newArr[j]) {
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            document.getElementById('ketqua').innerHTML = 'V is not in the array';
+        }
+        else {
+            document.getElementById('ketqua').innerHTML = 'V is in the array';
+        }
+    }
+</script>

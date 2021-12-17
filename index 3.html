@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+<!--Viết chương trình khởi tạo mảng số nguyên. -->
+<!--Hiển hiện giá trị lớn nhất trong mảng đó. -->
+<!--In ra giá trị trung bình của các phần tử trong mảng.-->
+<script>
+    let integer = [1, 2, 5, 11, 18, 3, 23, 38, 6, 100];
+    let  index = 0;
+    let max = integer[index];
+    let sum = 0;
+    let TB;
+    for (i = 0; i< integer.length; i++){
+        sum += integer[i]
+        TB = sum/integer.length
+        if (integer[i]>max) {
+            max = integer[i];
+            index=i;
+        }
+    }document.write('Trong mảng: '+ integer + '<br>'+'giá trị lớn nhất là ' + max + '<br>' + 'Tổng là ' + sum+ ' Trung bình la '+ TB);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<!--Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.-->
+<!--Chương trình tìm xem V có nằm trong mảng số nguyên không? Nếu V thuộc mảng số nguyên thì in ra-->
+<!--"V is in the array" còn lại in ra "V is not in the array".-->
+<script>
+    let integer = [1, 2, 5, 11, 18, 3, 23, 38, 6, 100];
+    let num = parseInt(prompt('V :'));
+    let found = false;
+    for (i = 0; i< integer.length; i++) {
+        if (num == integer[i]) {
+            found = true;
+            break
+        }
+    }
+    if (!found) {
+        alert('V is not in the array');
+    }
+    else {
+        alert('V is in the array');
+    }
+</script>
+</body>
+</html>
